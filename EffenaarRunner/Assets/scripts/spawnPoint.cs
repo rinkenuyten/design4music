@@ -19,7 +19,7 @@ public class spawnPoint : MonoBehaviour {
     {
         if (other.gameObject.tag == "visualizercube")
         {
-            Debug.Log("Scored!");
+            //Debug.Log("Scored!");
             gm.spawnPoint();
 
         }

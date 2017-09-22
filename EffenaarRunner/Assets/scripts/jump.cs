@@ -4,14 +4,15 @@ using System.Collections;
 public class jump : MonoBehaviour
 {
 
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
     private bool inAir = false;
     public KeyCode theKey = KeyCode.None;
+    public int JumpHeight = 400;
 
     // Use this for initialization
     void Start()
     {
-
+        rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -19,10 +20,9 @@ public class jump : MonoBehaviour
     {
         if (Input.GetKeyDown(theKey) && inAir == false)
         {
-
             rb.AddForce(Vector3.up * 2500);
             // GetComponent<Rigidbody>().AddForce(transform.right * 133300);
-           // Debug.Log("jump!");
+            // Debug.Log("jump!");
             inAir = true;
         }
     }
@@ -34,5 +34,14 @@ public class jump : MonoBehaviour
            // Debug.Log("on the ground");
             inAir = false;
         }
+    }
+
+    public void Jump(int allPlayers)
+    {
+            //Debug.Log(gameObject.name + " jump");
+            rb.AddForce(Vector3.up * (JumpHeight / allPlayers));
+            // GetComponent<Rigidbody>().AddForce(transform.right * 133300);
+            // Debug.Log("jump!");
+  
     }
 }

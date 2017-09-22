@@ -9,8 +9,8 @@ public class AudioPeer : MonoBehaviour {
     public float dbValue;
     public float pitchValue;
 
-    public float maxVisualScale = 25.0f;
-    public float visualModifier = 50.0f;
+    public float maxVisualScale = 10.0f;
+    public float visualModifier = 200.0f;
     public float smoothSpeed = 10.0f;
     public float keepPercentage = 0.5f;
 
@@ -27,16 +27,16 @@ public class AudioPeer : MonoBehaviour {
 	void Start () {
         source = GetComponent<AudioSource>();
 
-
-        /*AudioSource aud = GetComponent<AudioSource>();
+        /*
+        AudioSource aud = GetComponent<AudioSource>();
         aud.clip = Microphone.Start("Stereo Mix (Realtek High Definition Audio(SST))", true, 10, 44100);
         aud.loop = true;
         while(!(Microphone.GetPosition(null) > 0))
         {
 
         }
-        aud.Play();*/
-
+        aud.Play();
+        */
 
 
         samples = new float[SAMPLE_SIZE];
@@ -66,6 +66,15 @@ public class AudioPeer : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
+        if (Input.GetKeyDown(KeyCode.KeypadPlus))
+        {
+            visualModifier += 100;
+        }
+        if (Input.GetKeyUp(KeyCode.KeypadMinus))
+        {
+            visualModifier -= 100;
+        }
+
         AnalyzeSound();
         UpdateVisual();
 	}

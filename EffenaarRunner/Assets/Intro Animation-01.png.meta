@@ -1,0 +1,296 @@
+fileFormatVersion: 2
+guid: f869f74d9c3c0e4448014065226f0e4d
+timeCreated: 1505979184
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Intro Animation-01_0
+    21300002: Intro Animation-01_1
+    21300004: Intro Animation-01_2
+    21300006: Intro Animation-01_4
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Intro Animation-01_0
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 280
+        width: 483
+        height: 1529
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 241.5, y: -698.07355}
+        - {x: 241.5, y: -634.14716}
+        - {x: 121.43164, y: -227.57541}
+        - {x: 134.21973, y: -115.06499}
+        - {x: 131.66211, y: 2.5595522}
+        - {x: 136.77734, y: -107.39382}
+        - {x: 131.66211, y: -130.40732}
+        - {x: 157.23828, y: -163.64903}
+        - {x: 241.5, y: -184.10547}
+        - {x: 241.5, y: 593.2393}
+        - {x: 210.94824, y: 764.5}
+        - {x: -203.38576, y: 764.5}
+        - {x: -216.17384, y: 588.1252}
+        - {x: -241.5, y: 457.71536}
+        - {x: -241.5, y: -196.89075}
+        - {x: -159.90627, y: -212.23308}
+        - {x: -131.77248, y: -150.86375}
+        - {x: -139.44533, y: -74.1521}
+        - {x: -126.657234, y: -115.06499}
+        - {x: -177.80959, y: -521.6368}
+        - {x: -182.92482, y: -764.5}
+        - {x: 70.27929, y: -764.5}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Intro Animation-01_1
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 280
+        width: 488
+        height: 1529
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -121.16899, y: 764.5}
+        - {x: -226.0313, y: 682.7362}
+        - {x: -190.22466, y: 521.6417}
+        - {x: -243.93462, y: 232.69452}
+        - {x: -243.93462, y: -150.86375}
+        - {x: -208.12798, y: -186.66252}
+        - {x: -179.99419, y: -202.00485}
+        - {x: -156.97563, y: -196.89075}
+        - {x: -131.39946, y: -163.64903}
+        - {x: -136.5147, y: -122.73615}
+        - {x: -141.62993, y: -69.037994}
+        - {x: -139.07231, y: -79.26621}
+        - {x: -131.39946, y: -168.76314}
+        - {x: -192.78227, y: -475.60977}
+        - {x: -177.43657, y: -764.5}
+        - {x: 244, y: -764.5}
+        - {x: 244, y: 764.5}
+      - - {x: 139.70796, y: 25.57305}
+        - {x: 132.03511, y: 25.57305}
+        - {x: 124.36227, y: 20.458939}
+        - {x: 147.38083, y: 10.230718}
+        - {x: 149.93845, y: 15.344828}
+      - - {x: 129.4775, y: 97.17059}
+        - {x: 132.03511, y: 138.08348}
+        - {x: 137.15034, y: 125.2982}
+        - {x: 147.38083, y: 117.62704}
+        - {x: 152.49606, y: 117.62704}
+        - {x: 152.49606, y: 120.18409}
+        - {x: 144.8232, y: 115.06998}
+        - {x: 142.26558, y: 107.39881}
+      - - {x: 167.84177, y: 94.61354}
+        - {x: 170.39938, y: 97.17059}
+        - {x: 167.84177, y: 99.727646}
+        - {x: 172.957, y: 86.942375}
+        - {x: 172.957, y: 81.82826}
+        - {x: 165.28415, y: 76.71415}
+        - {x: 167.84177, y: 76.71415}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Intro Animation-01_2
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 280
+        width: 1048
+        height: 1529
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 266, y: -214.79013}
+        - {x: 266, y: 158.53992}
+        - {x: 176.68695, y: 764.5}
+        - {x: -186.49469, y: 764.5}
+        - {x: -265.78082, y: 652.0516}
+        - {x: -265.78082, y: -237.80363}
+        - {x: -252.99274, y: -311.95822}
+        - {x: -183.93707, y: -209.67603}
+        - {x: -158.3609, y: -163.64903}
+        - {x: -155.80328, y: -150.86375}
+        - {x: -163.47614, y: -71.59505}
+        - {x: -155.80328, y: -86.93738}
+        - {x: -150.68805, y: -94.60854}
+        - {x: -186.49469, y: -473.0527}
+        - {x: -204.39801, y: -731.31525}
+        - {x: -173.7066, y: -764.5}
+        - {x: -94.42047, y: -764.5}
+        - {x: -66.28668, y: -744.1005}
+        - {x: 174.12933, y: -741.5435}
+        - {x: 166.45648, y: -675.06006}
+      - - {x: 255.9731, y: -329.8576}
+        - {x: 255.9731, y: -342.64288}
+        - {x: 266, y: -347.757}
+        - {x: 266, y: -347.757}
+        - {x: 266, y: -314.5153}
+        - {x: 258.5307, y: -314.5153}
+      - - {x: 117.86176, y: 25.57305}
+        - {x: 110.18891, y: 25.57305}
+        - {x: 105.07367, y: 20.458939}
+        - {x: 107.631294, y: 17.901884}
+        - {x: 125.534615, y: 15.344828}
+        - {x: 125.534615, y: 17.901884}
+      - - {x: 107.631294, y: 97.17059}
+        - {x: 107.631294, y: 148.31169}
+        - {x: 110.18891, y: 150.86874}
+        - {x: 107.631294, y: 161.09697}
+        - {x: 112.74653, y: 130.41231}
+        - {x: 122.977, y: 117.62704}
+        - {x: 130.64984, y: 117.62704}
+        - {x: 133.20746, y: 120.18409}
+        - {x: 128.09222, y: 120.18409}
+        - {x: 120.41938, y: 112.512924}
+      - - {x: 145.99554, y: 99.727646}
+        - {x: 143.43793, y: 99.727646}
+        - {x: 145.99554, y: 79.27121}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Intro Animation-01_4
+      rect:
+        serializedVersion: 2
+        x: 3705
+        y: 280
+        width: 1225
+        height: 1529
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 243, y: 764.5}
+        - {x: -235.00949, y: 764.5}
+        - {x: -242.68234, y: 764.5}
+        - {x: -242.68234, y: -196.89075}
+        - {x: -214.54855, y: -271.04535}
+        - {x: -163.39621, y: -209.67603}
+        - {x: -135.26242, y: -163.64903}
+        - {x: -140.37766, y: -74.1521}
+        - {x: -132.7048, y: -155.97786}
+        - {x: -163.39621, y: -490.9521}
+        - {x: -181.29953, y: -726.2012}
+        - {x: -160.8386, y: -764.5}
+        - {x: -61.091522, y: -764.5}
+        - {x: -48.303436, y: -738.98645}
+        - {x: 48.88602, y: -754.3288}
+        - {x: 243, y: -726.2012}
+      - - {x: 148.63309, y: 17.901884}
+        - {x: 140.96024, y: 25.57305}
+        - {x: 133.28738, y: 25.57305}
+        - {x: 117.94169, y: 17.901884}
+        - {x: 146.07547, y: 0.0024971243}
+        - {x: 148.63309, y: 10.230718}
+      - - {x: 140.96024, y: 84.385315}
+        - {x: 130.72977, y: 153.42581}
+        - {x: 133.28738, y: 155.98286}
+        - {x: 130.72977, y: 161.09697}
+        - {x: 135.845, y: 130.41231}
+        - {x: 146.07547, y: 117.62704}
+        - {x: 153.74832, y: 117.62704}
+        - {x: 156.30594, y: 120.18409}
+        - {x: 151.1907, y: 120.18409}
+        - {x: 143.51785, y: 112.512924}
+        - {x: 140.96024, y: 76.71415}
+        - {x: 143.51785, y: 76.71415}
+        - {x: 140.96024, y: 79.27121}
+      - - {x: 166.5364, y: 99.727646}
+        - {x: 174.20926, y: 81.82826}
+        - {x: 169.09402, y: 79.27121}
+      - - {x: 233.03445, y: 439.81598}
+        - {x: 233.03445, y: 432.1448}
+        - {x: 240.7073, y: 424.47366}
+        - {x: 243, y: 424.47366}
+        - {x: 243, y: 450.0442}
+        - {x: 243, y: 450.0442}
+      - - {x: 212.57352, y: 646.93744}
+        - {x: 189.55496, y: 616.2528}
+        - {x: 189.55496, y: 508.85648}
+        - {x: 202.34305, y: 452.60126}
+        - {x: 243, y: 452.60126}
+        - {x: 243, y: 646.93744}
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
