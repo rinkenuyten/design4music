@@ -2,6 +2,8 @@
 using UnityEngine.UI;
 using System.Collections;
 using System;
+using UnityEngine.SceneManagement;
+
 public class GameManager : MonoBehaviour {
 
     public Transform cubeB;
@@ -34,8 +36,16 @@ public class GameManager : MonoBehaviour {
     public Canvas StartCanvas;
     public Camera maincam;
 
-   
+    public GameObject AudioBeat;
+    public GameObject blocker;
+    public GameObject blocker2;
+    public GameObject blocker3;
+    private Renderer rend;
+    private Renderer rend2;
+    private Renderer rend3;
 
+    private GameObject pl1;
+    private GameObject pl2;
     // Use this for initialization
     void Start() {
         randomDirection = new System.Random();
@@ -44,15 +54,18 @@ public class GameManager : MonoBehaviour {
             //  Debug.Log(device);
         }
 
-        GameObject pl1 = GameObject.Find("player1");
+        pl1 = GameObject.Find("player1");
         Player1Jump = (jump)pl1.GetComponent(typeof(jump));
         //Player1Jump.Jump();
 
-        GameObject pl2 = GameObject.Find("player2");
+        pl2 = GameObject.Find("player2");
         Player2Jump = (jump)pl2.GetComponent(typeof(jump));
         // Player2Jump.Jump();
+        rend = blocker.GetComponent<Renderer>();
+        rend2 = blocker2.GetComponent<Renderer>();
+        rend3 = blocker3.GetComponent<Renderer>();
 
-
+        AudioBeat.GetComponent<BeatDetection>().CallBackFunction = MyCallbackEventHandler;
     }
 
     // Update is called once per frame
@@ -73,7 +86,46 @@ public class GameManager : MonoBehaviour {
         }
         scoretextPlayer2.text = "Score: " + scorePlayer2 + " - " + Math.Round((float)percentagePlayer2) + "%";
 
+        float pl1scale = (float)(100 - Math.Round(percentagePlayer1)) / 100;
+        float pl2scale = (float)(100 - Math.Round(percentagePlayer2)) / 100;
 
+        pl1.transform.localScale = new Vector3(0.5f, pl1scale + 0.5f, 1);
+        pl2.transform.localScale = new Vector3(0.5f, pl2scale + 0.5f, 1);
+
+        rend.material.color = getColor((float)(Math.Round((float)percentagePlayer2) / 100), 0f, (float)(Math.Round((float)percentagePlayer1) / 100), 1);
+        rend2.material.color = rend.material.color;
+        rend3.material.color = rend.material.color;
+    }
+
+    public Color getColor(float red, float green, float blue, int alpha)
+    {
+
+        // Color derp = new Color((1/255)*red, (1/255)*green, (1/255)*blue, (1/255)*alpha);
+        // Debug.Log(derp);
+
+        Color derp2 = new Color(red, green, blue, alpha);
+        //Debug.Log(derp2);
+
+        return derp2;
+    }
+
+    public void MyCallbackEventHandler(BeatDetection.EventInfo eventInfo)
+    {
+        switch (eventInfo.messageInfo)
+        {
+            case BeatDetection.EventType.Energy:
+                spawnPoint();
+                break;
+            case BeatDetection.EventType.HitHat:
+                spawnPoint();
+                break;
+            case BeatDetection.EventType.Kick:
+                spawnPoint();
+                break;
+            case BeatDetection.EventType.Snare:
+                spawnPoint();
+                break;
+        }
     }
 
     public void spawnPoint()
@@ -161,15 +213,7 @@ public class GameManager : MonoBehaviour {
     
     public void Restart()
     {
-        scorePlayer1 = -1;
-        scorePlayer2 = -1;
-        addScorePlayer1();
-        addScorePlayer2();
-
-        StartCanvas.gameObject.SetActive(true);
-        maincam.gameObject.GetComponent<AudioSource>().Stop();
-
-
+        SceneManager.LoadScene("prototype1");
     }
 
 

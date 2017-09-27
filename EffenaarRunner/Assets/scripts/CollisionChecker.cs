@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollisionChecker : MonoBehaviour {
 
     public GameManager gm;
+    public ParticleSystem pm;
 
 	// Use this for initialization
 	void Start () {
@@ -20,8 +21,17 @@ public class CollisionChecker : MonoBehaviour {
     {
         if (other.gameObject.tag == "cube")
         {
-           // Debug.Log("Scored!");
-            if(this.gameObject.name == "player1")
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, transform.forward, out hit))
+            {
+                Debug.Log("Point of contact: " + hit.point);
+                Vector3 newpos = new Vector3(hit.point.x, hit.point.y, 5);
+                pm.transform.position = newpos;
+                pm.Play();
+            }
+
+            // Debug.Log("Scored!");
+            if (this.gameObject.name == "player1")
                 gm.addScorePlayer1();
             if (this.gameObject.name == "player2")
                 gm.addScorePlayer2();

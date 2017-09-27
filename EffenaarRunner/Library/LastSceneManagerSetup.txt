@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Beat Detection/Event - Example/Event_Example.unity
+- path: Assets/prototype1.unity
   isLoaded: 1
   isActive: 1
