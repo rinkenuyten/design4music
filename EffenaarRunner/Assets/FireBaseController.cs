@@ -92,7 +92,6 @@ public class FireBaseController : MonoBehaviour
                 blauw++;
             }
         }
-        Debug.Log("blauw " + blauw);
         if (blauw > 0)
         {
            
@@ -127,7 +126,7 @@ public class FireBaseController : MonoBehaviour
                 rood++;
             }
         }
-        Debug.Log("rood " + rood);
+
         if (rood > 0)
         {
             gm.JumpPlayer2(jsonvale.Count);

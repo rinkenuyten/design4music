@@ -24,7 +24,7 @@ public class CollisionChecker : MonoBehaviour {
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.forward, out hit))
             {
-                Debug.Log("Point of contact: " + hit.point);
+
                 Vector3 newpos = new Vector3(hit.point.x, hit.point.y, 5);
                 pm.transform.position = newpos;
                 pm.Play();

@@ -88,6 +88,14 @@ public class GameManager : MonoBehaviour {
 
         float pl1scale = (float)(100 - Math.Round(percentagePlayer1)) / 100;
         float pl2scale = (float)(100 - Math.Round(percentagePlayer2)) / 100;
+        if(pl1scale == 0)
+        {
+            pl1scale = 1;
+        }
+        if (pl2scale == 0)
+        {
+            pl2scale = 1;
+        }
 
         pl1.transform.localScale = new Vector3(0.5f, pl1scale + 0.5f, 1);
         pl2.transform.localScale = new Vector3(0.5f, pl2scale + 0.5f, 1);
@@ -117,15 +125,43 @@ public class GameManager : MonoBehaviour {
                 spawnPoint();
                 break;
             case BeatDetection.EventType.HitHat:
-                spawnPoint();
+                spawnHigh();
                 break;
             case BeatDetection.EventType.Kick:
-                spawnPoint();
+                spawnLow();
                 break;
             case BeatDetection.EventType.Snare:
-                spawnPoint();
+                spawnMedium();
                 break;
         }
+    }
+
+    public void spawnLow()
+    {
+        Instantiate(cubeR, new Vector3(11, 2f, 0), Quaternion.identity);
+        Instantiate(cubeB, new Vector3(11, -3f, 0), Quaternion.identity);
+
+
+        amountOfSpawn++;
+        textAmountOfSpawns.text = "" + amountOfSpawn;
+    }
+
+    public void spawnMedium()
+    {
+        Instantiate(cubeR, new Vector3(11, 3f, 0), Quaternion.identity);
+        Instantiate(cubeB, new Vector3(11, -2f, 0), Quaternion.identity);
+
+        amountOfSpawn++;
+        textAmountOfSpawns.text = "" + amountOfSpawn;
+    }
+
+    public void spawnHigh()
+    {
+        Instantiate(cubeR, new Vector3(11, 4f, 0), Quaternion.identity);
+        Instantiate(cubeB, new Vector3(11, -1f, 0), Quaternion.identity);
+
+        amountOfSpawn++;
+        textAmountOfSpawns.text = "" + amountOfSpawn;
     }
 
     public void spawnPoint()
@@ -192,19 +228,19 @@ public class GameManager : MonoBehaviour {
             case 200:
                 Instantiate(text200, new Vector3(0, height, -1), Quaternion.identity);
                 break; //optional
-            case 300:
+            case 400:
                 Instantiate(textGreat, new Vector3(0, height, -1), Quaternion.identity);
                 break; //optional
-            case 400:
+            case 500:
                 Instantiate(textAmazing, new Vector3(0, height, -1), Quaternion.identity);
                 break; //optional
-            case 500:
+            case 600:
                 Instantiate(textFantastic, new Vector3(0, height, -1), Quaternion.identity);
                 break; //optional
-            case 600:
+            case 700:
                 Instantiate(textOutstanding, new Vector3(0, height, -1), Quaternion.identity);
                 break; //optional
-            case 700:
+            case 800:
                 Instantiate(textUnbelievable, new Vector3(0, height, -1), Quaternion.identity);
                 break; //optional
         }

@@ -7,6 +7,7 @@ public class move : MonoBehaviour {
     private float initialheight;
     public AnimationCurve myCurve;
     private float timeStarter;
+    public bool shouldWiggle;
 
     // Use this for initialization
     void Start () {
@@ -21,7 +22,8 @@ public class move : MonoBehaviour {
         horizontalposition.x -= speed;
         this.transform.position = horizontalposition;
 
-        transform.position = new Vector3(transform.position.x, initialheight + myCurve.Evaluate(((Time.time + timeStarter) % myCurve.length)), transform.position.z);
+        if(shouldWiggle)
+            transform.position = new Vector3(transform.position.x, initialheight + myCurve.Evaluate(((Time.time + timeStarter) % myCurve.length)), transform.position.z);
 
         if (this.transform.position.x < -20)
         {

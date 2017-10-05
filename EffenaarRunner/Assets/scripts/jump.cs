@@ -39,7 +39,7 @@ public class jump : MonoBehaviour
     public void Jump(int allPlayers)
     {
             //Debug.Log(gameObject.name + " jump");
-            rb.AddForce(Vector3.up * (JumpHeight / allPlayers));
+            rb.AddForce(Vector3.up * ((JumpHeight / allPlayers) + 50));
             // GetComponent<Rigidbody>().AddForce(transform.right * 133300);
             // Debug.Log("jump!");
   
